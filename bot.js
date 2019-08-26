@@ -42,7 +42,7 @@ bot.on('messageReactionAdd', (messageReaction, user) =>{
     var member = messageReaction.message.guild.members.find(member => member.id === user.id);
     if(member)
     {
-        if(roleName === ':Sache:'){
+        if(roleName === '<:Sache:615463851684790298>'){
             member.removeRole(role.id)
             member.addRole(role2.id)
             console.log("Success.")
