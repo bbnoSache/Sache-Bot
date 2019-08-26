@@ -34,6 +34,22 @@ bot.on('raw', event =>{
     }
 });
 
+bot.on('message', async message => {
+    let blacklisted = ['Hoes Mad']
+  
+    
+    let foundInText = false;
+    for (var i in blacklisted) {
+      if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase())) foundInText = true;
+    }
+    
+  
+    
+      if (foundInText) {
+        message.channel.sendMessage('' + message.author + ' https://youtu.be/czd4GL4RZVs')
+    }
+});
+
 bot.on('messageReactionAdd', (messageReaction, user) =>{
     var roleName = messageReaction.emoji.name
     var role = messageReaction.message.guild.roles.find("name", "Unverified");
