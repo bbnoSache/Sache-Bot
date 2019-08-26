@@ -6,7 +6,7 @@ bot.on('ready', ()=>{
     console.log('Online.')
     bot.user.setActivity(`Sache's Videos`, {type: ("WATCHING")})
     var Channel = bot.channels.get("613187138367913985");
-    Channel.fetchMessage("615464342535667712");
+    Channel.fetchMessage("613188652469714964");
 })
 
 bot.on('raw', event =>{
@@ -14,7 +14,7 @@ bot.on('raw', event =>{
     if(eventname === 'MESSAGE_REACTION_ADD')
     {
         var reactionChannel = bot.channels.get(event.d.channel_id);
-        if(event.d.message_id === '615464342535667712')
+        if(event.d.message_id === '613188652469714964')
         {
             reactionChannel.fetchMessage(event.d.message_id)
             .then(msg => {
@@ -42,7 +42,7 @@ bot.on('messageReactionAdd', (messageReaction, user) =>{
     var member = messageReaction.message.guild.members.find(member => member.id === user.id);
     if(member)
     {
-        if(roleName === '<:Sache:615463851684790298>'){
+        if(roleName === '💯'){
             member.removeRole(role.id)
             member.addRole(role2.id)
             console.log("Success.")
