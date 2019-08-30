@@ -71,7 +71,7 @@ bot.on('guildMemberAdd', member=>{
     const embed = new RichEmbed()
     .setAuthor(`Welcome to Sache's Traphouse`, `https://cdn.discordapp.com/attachments/601536698987577344/617144814902706196/Sache_New_Test.png`, ``)
     .setDescription(`Peep the ***Rules*** & ***Welcome*** channel to see how to gain access to the server, ${member}`)
-    .setImage(`https://media.giphy.com/media/Z8JSIEhG36CyI/giphy.gif`)
+    .setImage(`https://cdn.discordapp.com/attachments/601536698987577344/617144814902706196/Sache_New_Test.png`)
     .setColor(0x000000);
     channel.sendEmbed(embed)
 })
