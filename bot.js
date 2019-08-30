@@ -80,7 +80,7 @@ bot.on('guildMemberRemove', member=>{
     let channel = member.guild.channels.find(channel => channel.id === "612755543940923392")
     const embed = new RichEmbed()
     .setAuthor(`Smh`, ``, ``)
-    .setDescription(` ${member} has left the Trap House, Chief said this wasn't it.`)
+    .setDescription(` Damn, ${member} has left the Trap House, Chief said this wasn't it.`)
     .setImage(``)
     .setColor(0x000000);
     channel.sendEmbed(embed)
