@@ -245,7 +245,7 @@ bot.on('message', msg =>{
             let getRole = msg.guild.roles.find("name", role);
             if(!getRole) return msg.channel.send("Can't find that role")
             getmember.addRole(getRole.id)
-            msg.channel.send(<@${member}> You've been given ${getRole.name})
+            msg.channel.send(`<@${member}> You've been given ${getRole.name}`)
         break;
         case '-removerole':
             if(!msg.member.hasPermission("MANAGE_ROLES")) return msg.channel.sendMessage("You do not have permissions to add roles.");
@@ -258,7 +258,7 @@ bot.on('message', msg =>{
             let getRole2 = msg.guild.roles.find("name", role2);
             if(!getRole2) return msg.channel.send("Can't find that role")
             getmember2.removeRole(getRole2.id)
-            msg.channel.send(<@${member2}> You've been given ${getRole2.name})
+            msg.channel.send(`<@${member2}> You've been given ${getRole2.name}`)
         break;
     }
 })
