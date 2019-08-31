@@ -253,7 +253,7 @@ bot.on('message', msg =>{
             let member2 = msg.mentions.users.first()
             if(!member2) return msg.channel.send("Please specify a real user")
             if(!args[1]) return msg.channel.send('Specify something!')
-            if(!args[2]) return msg.channel.send('Say a role Pilgrim')
+            if(!args[2]) return msg.channel.send('Say a role')
             let getmember2 = msg.guild.members.find("id", member2)
             let getRole2 = msg.guild.roles.find("name", role2);
             if(!getRole2) return msg.channel.send("Can't find that role")
