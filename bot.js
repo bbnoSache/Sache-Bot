@@ -236,7 +236,7 @@ bot.on('message', msg =>{
         case '!addrole':
             if(!msg.member.hasPermission("MANAGE_ROLES")) return msg.channel.sendMessage("You do not have permissions to add roles.");
             if(!msg.guild.me.hasPermission("MANAGE_ROLES")) return msg.channel.sendMessage("I do not have permissions.");
-            if(!args[2]) return msg.channel.send('Say a role nigga')
+            if(!args[2]) return msg.channel.send('Say a role Pilgrim')
             
             let role = msg.content.slice(31)
             let member = msg.mentions.users.first()
