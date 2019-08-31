@@ -233,6 +233,18 @@ bot.on('message', msg =>{
             }
             }
         break;
+        case '!addrole':
+            if(!msg.member.hasPermission("MANAGE_ROLES")) return msg.channel.sendMessage("You do not have permissions to add roles.");
+            if(!msg.guild.me.hasPermission("MANAGE_ROLES")) return msg.channel.sendMessage("I do not have permissions.");
+            if(!args[2]) return msg.channel.send('Say a role nigga')
+            
+            let role = msg.content.slice(31)
+            let member = msg.mentions.users.first()
+            if(!member) return msg.channel.send("Please specify a user")
+            let getRole = msg.guild.roles.find("name", role)
+            if(!getRole) return msg.channel.send("Can't find that role")
+            member.addRole(role.id)
+            msg.channel.send(`${member} You've been given ${getRole.name}`)
     }
 })
 
