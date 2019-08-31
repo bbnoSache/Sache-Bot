@@ -233,7 +233,7 @@ bot.on('message', msg =>{
             }
             }
         break;
-        case '-addrole':
+        case '!addrole':
             if(!msg.member.hasPermission("MANAGE_ROLES")) return msg.channel.sendMessage("You do not have permissions to manage roles.");
             if(!msg.guild.me.hasPermission("MANAGE_ROLES")) return msg.channel.sendMessage("I do not have permissions.");
             let member = msg.mentions.users.first()
@@ -247,7 +247,7 @@ bot.on('message', msg =>{
             getmember.addRole(getRole.id)
             msg.channel.send(`<@${member}> You've been given the role ${getRole.name}`)
         break;
-        case '-removerole':
+        case '!removerole':
             if(!msg.member.hasPermission("MANAGE_ROLES")) return msg.channel.sendMessage("Lol no");
             if(!msg.guild.me.hasPermission("MANAGE_ROLES")) return msg.channel.sendMessage("I do not have permissions.");
             let member2 = msg.mentions.users.first()
