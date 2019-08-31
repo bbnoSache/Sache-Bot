@@ -233,18 +233,33 @@ bot.on('message', msg =>{
             }
             }
         break;
-        case '!addrole':
+        case '-addrole':
             if(!msg.member.hasPermission("MANAGE_ROLES")) return msg.channel.sendMessage("You do not have permissions to add roles.");
             if(!msg.guild.me.hasPermission("MANAGE_ROLES")) return msg.channel.sendMessage("I do not have permissions.");
-            if(!args[2]) return msg.channel.send('Say a role Pilgrim')
-            
-            let role = msg.content.slice(31)
             let member = msg.mentions.users.first()
-            if(!member) return msg.channel.send("Please specify a user")
-            let getRole = msg.guild.roles.find("name", role)
+            if(!member) return msg.channel.send("Please specify a real user")
+            if(!args[1]) return msg.channel.send('Specify something!')
+            if(!args[2]) return msg.channel.send('Say a role Pilgrim')
+            let role = msg.content.slice(31)
+            let getmember = msg.guild.members.find("id", member)
+            let getRole = msg.guild.roles.find("name", role);
             if(!getRole) return msg.channel.send("Can't find that role")
-            member.addRole(role.id)
-            msg.channel.send(`${member} You've been given ${getRole.name}`)
+            getmember.addRole(getRole.id)
+            msg.channel.send(<@${member}> You've been given ${getRole.name})
+        break;
+        case '-removerole':
+            if(!msg.member.hasPermission("MANAGE_ROLES")) return msg.channel.sendMessage("You do not have permissions to add roles.");
+            if(!msg.guild.me.hasPermission("MANAGE_ROLES")) return msg.channel.sendMessage("I do not have permissions.");
+            let member2 = msg.mentions.users.first()
+            if(!member2) return msg.channel.send("Please specify a real user")
+            if(!args[1]) return msg.channel.send('Specify something!')
+            if(!args[2]) return msg.channel.send('Say a role Pilgrim')
+            let getmember2 = msg.guild.members.find("id", member2)
+            let getRole2 = msg.guild.roles.find("name", role2);
+            if(!getRole2) return msg.channel.send("Can't find that role")
+            getmember2.removeRole(getRole2.id)
+            msg.channel.send(<@${member2}> You've been given ${getRole2.name})
+        break;
     }
 })
 
