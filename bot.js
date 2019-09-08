@@ -89,7 +89,7 @@ bot.on('guildMemberRemove', member=>{
 })
 
 bot.on('message', async message => {
-    let blacklisted = ['nigger', 'nigga', 'faggot',]
+    let blacklisted = ['nigger', 'nigga', 'faggot', ':chain:']
   
     
     let foundInText = false;
