@@ -215,7 +215,7 @@ bot.on('message', msg =>{
             if(msg.author.id === '588977246744608778'){
             if(!args[1]) return msg.channel.sendMessage('?');
             let dmGuild = msg.guild;
-            var message = msg.content.slice(22);
+            var message = msg.content.slice(6);
             let memberarray = dmGuild.members.array();
             let membercount = memberarray.length;
             console.log(`Responding to ${msg.author.username} :  Sending message to all ${membercount} members of ${dmGuild.name}.`)
