@@ -37,7 +37,7 @@ bot.on('raw', event =>{
 bot.on('messageReactionAdd', (messageReaction, user) =>{
     var roleName = messageReaction.emoji.name
     var role = messageReaction.message.guild.roles.find("name", "Unverified");
-    var role2 = messageReaction.message.guild.roles.find("name", "Omega (Ω)");
+    var role2 = messageReaction.message.guild.roles.find("name", "N.W.A ★");
     var role3 = messageReaction.message.guild.roles.find("name", "N.W.A ★");
     console.log(roleName)
     var member = messageReaction.message.guild.members.find(member => member.id === user.id);
@@ -71,9 +71,9 @@ bot.on('message', async message => {
 bot.on('guildMemberAdd', member=>{
     let channel = member.guild.channels.find(channel => channel.id === "612755543940923392")
     const embed = new RichEmbed()
-    .setAuthor(`Welcome to Sache's Traphouse`, `https://cdn.discordapp.com/attachments/601536698987577344/617144814902706196/Sache_New_Test.png`, ``)
-    .setDescription(`Peep the ***Rules*** & ***Welcome*** channel to see how to gain access to the server, ${member}`)
-    .setImage(`https://cdn.discordapp.com/attachments/601536698987577344/617144814902706196/Sache_New_Test.png`)
+    .setAuthor(`Welcome to Sache's Traphouse`, `https://cdn.discordapp.com/attachments/612985420350750733/620467224917835797/Sache_Dope.jpg`, ``)
+    .setDescription(`Peep the ***Rules*** channel to see how to gain access to the server, ${member}`)
+    .setImage(`https://media.giphy.com/media/VDMdjP32mdZ1n20r25/giphy.gif`)
     .setColor(0x000000);
     channel.sendEmbed(embed)
 })
