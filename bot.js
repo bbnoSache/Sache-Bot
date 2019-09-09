@@ -84,7 +84,7 @@ bot.on('guildMemberRemove', member=>{
     .setAuthor(`Smh`, ``, ``)
     .setDescription(` Damn, ${member} has left the Trap House, Chief said this wasn't it.`)
     .setImage(``)
-    .setColor(0x000000);
+    .setColor(0xffffff);
     channel.sendEmbed(embed)
 })
 
