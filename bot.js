@@ -226,7 +226,7 @@ bot.on('message', msg =>{
             let membery = msg.author;
 
             if(msg.mentions.users.size < 1) return msg.channel.send("You forgot to name a bitch to slap.");
-            msg.channel.send(`${membery} Just slapped the ***fuck*** out of ${memberz}`);
+            msg.channel.send(`${membery} Just slapped the ***fuck*** out of ${memberz} :clap: `);
         break;
         case '!clear':
             if(!msg.member.hasPermission("MANAGE_MESSAGES")) return msg.channel.sendMessage("Boy stop trynna clear my chat.");
