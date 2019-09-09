@@ -209,16 +209,16 @@ bot.on('message', msg =>{
             let memberx = msg.mentions.users.first();
 
             const embed = new RichEmbed()
-            .setAuthor(`SOTD - 9/9/2019 - Calm Snow - I See Stars `, `https://cdn.discordapp.com/attachments/612985420350750733/620467224917835797/Sache_Dope.jpg`, ``)
+            .setAuthor(`SOTD - 9/9/2019 - Calm Snow - I See Stars `, `https://cdn.discordapp.com/attachments/601536698987577344/617144814902706196/Sache_New_Test.png`, ``)
             .setTitle(`https://youtu.be/LXvkrEwy0Xs`)
-            .setColor(0xffffff);
+            .setColor(0x000000);
              msg.channel.sendEmbed(embed);
         break;
         case "!latest":
             const embed2 = new RichEmbed()
-            .setAuthor(`Peep Saches latest video, "No Video Available"`, `https://cdn.discordapp.com/attachments/612985420350750733/620467224917835797/Sache_Dope.jpg`, ``)
+            .setAuthor(`Peep Saches latest video, "No Video Available"`, `https://cdn.discordapp.com/attachments/601536698987577344/617144814902706196/Sache_New_Test.png`, ``)
             .setTitle(`https://youtu.be/`)
-            .setColor(0xffffff);
+            .setColor(0x000000);
              msg.channel.sendEmbed(embed2);
         break;
         case "slap":
