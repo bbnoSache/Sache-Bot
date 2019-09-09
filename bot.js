@@ -136,6 +136,7 @@ bot.on('message', msg =>{
             if(msg.author.id === "588977246744608778"){
                 let mentioned = msg.mentions.users.first()
                 let message = args.join(' ').slice(25)
+                msg.channel.bulkDelete('1')
                 mentioned.send(message)   
             }
         break;
@@ -203,6 +204,29 @@ bot.on('message', msg =>{
             const uembed = new RichEmbed()
             .setTitle('User has been unbanned!')
             msg.channel.sendEmbed(uembed);
+        break;
+        case "!sotd":
+            let memberx = msg.mentions.users.first();
+
+            const embed = new RichEmbed()
+            .setAuthor(`SOTD - 9/9/2019 - Calm Snow - I See Stars `, `https://cdn.discordapp.com/attachments/612985420350750733/620467224917835797/Sache_Dope.jpg`, ``)
+            .setTitle(`https://youtu.be/LXvkrEwy0Xs`)
+            .setColor(0xffffff);
+             msg.channel.sendEmbed(embed);
+        break;
+        case "!latest":
+            const embed2 = new RichEmbed()
+            .setAuthor(`Peep Saches latest video, "No Video Available"`, `https://cdn.discordapp.com/attachments/612985420350750733/620467224917835797/Sache_Dope.jpg`, ``)
+            .setTitle(`https://youtu.be/`)
+            .setColor(0xffffff);
+             msg.channel.sendEmbed(embed2);
+        break;
+        case "slap":
+            let memberz = msg.mentions.members.first();
+            let membery = msg.author;
+
+            if(msg.mentions.users.size < 1) return msg.channel.send("You forgot to name a bitch to slap.");
+            msg.channel.send(`${membery} Just slapped the ***fuck*** out of ${memberz}`);
         break;
         case '!clear':
             if(!msg.member.hasPermission("MANAGE_MESSAGES")) return msg.channel.sendMessage("Boy stop trynna clear my chat.");
