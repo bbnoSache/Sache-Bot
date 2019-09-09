@@ -38,7 +38,7 @@ bot.on('messageReactionAdd', (messageReaction, user) =>{
     var roleName = messageReaction.emoji.name
     var role = messageReaction.message.guild.roles.find("name", "Unverified");
     var role2 = messageReaction.message.guild.roles.find("name", "Omega (Ω)");
-    var role3 = messageReaction.message.guild.roles.find("name", "N.W.A");
+    var role3 = messageReaction.message.guild.roles.find("name", "N.W.A ★");
     console.log(roleName)
     var member = messageReaction.message.guild.members.find(member => member.id === user.id);
     if(member)
