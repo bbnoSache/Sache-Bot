@@ -152,14 +152,14 @@ bot.on('message', msg =>{
                     if(!kreason){
                         member.kick('You were kicked.');
                         const kembed = new RichEmbed()
-                        .setTitle('Oh Shit, they just got yeeted from the server lmao.')
+                        .setTitle('Get the fuck out.')
                         .addField("User", tuser)
                         msg.channel.sendEmbed(kembed);
                     }
                     else{
                         member.kick(kreason);
                         const kembed = new RichEmbed()
-                        .setTitle('Oh Shit, they just got yeeted from the server lmao.')
+                        .setTitle('Get the fuck out.')
                         .addField("User", tuser)
                         msg.channel.sendEmbed(kembed);
                     }
@@ -178,7 +178,7 @@ bot.on('message', msg =>{
                     if(!breason){
                         member.ban('You were banned.');
                         const bembed = new RichEmbed()
-                        .setTitle('User has been banned!')
+                        .setTitle('Get the fuck out.')
                         .addField("User's name", user)
                         .addField("User's ID", user.id)
                         .addField("Reason", 'No reason specified.');
@@ -187,7 +187,7 @@ bot.on('message', msg =>{
                     else{
                         member.ban(breason);
                         const bembed = new RichEmbed()
-                        .setTitle('User has been banned!')
+                        .setTitle('Get the fuck out.')
                         .addField("User's name", user)
                         .addField("User's ID", user.id)
                         .addField("Reason", breason);
@@ -221,7 +221,7 @@ bot.on('message', msg =>{
             .setColor(0x000000);
              msg.channel.sendEmbed(embed2);
         break;
-        case "slap":
+        case "Slap":
             let memberz = msg.mentions.members.first();
             let membery = msg.author;
 
