@@ -214,6 +214,11 @@ bot.on('message', msg =>{
             .setColor(0x000000);
              msg.channel.sendEmbed(embed);
         break;
+        case "Google":
+            let memberv = msg.author;
+
+            msg.channel.send(`${memberv} Are you still using Google? Then I have something to show you! Ecosia, is a free Search Engine, just like Google...a bunch of bullshit.`);
+        break;      
         case "!latest":
             const embed2 = new RichEmbed()
             .setAuthor(`Peep Saches latest video, "No Video Available"`, `https://cdn.discordapp.com/attachments/601536698987577344/617144814902706196/Sache_New_Test.png`, ``)
