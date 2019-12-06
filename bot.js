@@ -72,7 +72,7 @@ bot.on('guildMemberAdd', member=>{
     let channel = member.guild.channels.find(channel => channel.id === "612755543940923392")
     const embed = new RichEmbed()
     .setAuthor(`Welcome to Sache's Traphouse ★`, ``, ``)
-    .setDescription(`Peep the ***Rules*** channel to see how to gain access to the server, ${member} :st_Verified: `)
+    .setDescription(`Peep the ***Rules*** channel to see how to gain access to the server, ${member} `)
     .setImage(`https://cdn.discordapp.com/attachments/612985420350750733/629208287086247947/Sache_Final.gif`)
     .setColor(0x000000);
     channel.sendEmbed(embed)
