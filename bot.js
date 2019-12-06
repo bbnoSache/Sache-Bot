@@ -4,7 +4,7 @@ let activated = '0'
 
 bot.on('ready', ()=>{
     console.log('Online.')
-    bot.user.setActivity(`yt.com/Sache`, {type: ("WATCHING")})
+    bot.user.setActivity(`Some Bullshit`, {type: ("WATCHING")})
     var Channel = bot.channels.get("613187138367913985");
     Channel.fetchMessage("619053215618433071");
 })
