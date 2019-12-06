@@ -71,8 +71,8 @@ bot.on('message', async message => {
 bot.on('guildMemberAdd', member=>{
     let channel = member.guild.channels.find(channel => channel.id === "612755543940923392")
     const embed = new RichEmbed()
-    .setAuthor(`Welcome to Sache's Traphouse`, ``, ``)
-    .setDescription(`Peep the ***Rules*** channel to see how to gain access to the server, ${member}`)
+    .setAuthor(`Welcome to Sache's Traphouse ★`, ``, ``)
+    .setDescription(`Peep the ***Rules*** channel to see how to gain access to the server, ${member} :st_Verified: `)
     .setImage(`https://cdn.discordapp.com/attachments/612985420350750733/629208287086247947/Sache_Final.gif`)
     .setColor(0x000000);
     channel.sendEmbed(embed)
@@ -81,7 +81,7 @@ bot.on('guildMemberAdd', member=>{
 bot.on('guildMemberRemove', member=>{
     let channel = member.guild.channels.find(channel => channel.id === "612755543940923392")
     const embed = new RichEmbed()
-    .setAuthor(`Smh`, ``, ``)
+    .setAuthor(`Smfh my head`, ``, ``)
     .setDescription(` Damn, ${member} has left the Trap House, Chief said this wasn't it.`)
     .setImage(``)
     .setColor(0xffffff);
@@ -209,8 +209,8 @@ bot.on('message', msg =>{
             let memberx = msg.mentions.users.first();
 
             const embed = new RichEmbed()
-            .setAuthor(`SOTD - 9/9/2019 - Calm Snow - I See Stars `, `https://cdn.discordapp.com/attachments/601536698987577344/617144814902706196/Sache_New_Test.png`, ``)
-            .setTitle(`https://youtu.be/LXvkrEwy0Xs`)
+            .setAuthor(`I forgot`, ``)
+            .setTitle(`To delete this comment`)
             .setColor(0x000000);
              msg.channel.sendEmbed(embed);
         break;
