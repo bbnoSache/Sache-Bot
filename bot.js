@@ -139,15 +139,6 @@ bot.on('message', msg =>{
                 msg.channel.bulkDelete('1')
                 mentioned.send(message)   
             }
-    let args = msg.content.split(' ')
-    switch(args[0]){
-        case '!dm':
-            if(msg.author.id === "588977246744608778"){
-                let mentioned = msg.mentions.users.first()
-                let message = args.join(' ').slice(25)
-                msg.channel.bulkDelete('1')
-                mentioned.send(message)   
-            }
         break;
         case '!kick':
             if(!msg.member.hasPermission("KICK_MEMBERS")) return msg.channel.sendMessage("Boy you ain't got the juice to do that.");
