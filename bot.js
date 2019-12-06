@@ -109,7 +109,7 @@ bot.on('message', msg =>{
     function sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
     }
-    if(msg.author.id === '435158112480133121')
+    if(msg.author.id === '588977246744608778')
     {
         if(msg.content === '-activate')
         {
@@ -120,7 +120,7 @@ bot.on('message', msg =>{
             activated = '0'
         }
     }
-    if(msg.author.id === '435158112480133121')
+    if(msg.author.id === '588977246744608778')
     {
         if(activated === '1')
         {
