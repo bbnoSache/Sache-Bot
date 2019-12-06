@@ -139,6 +139,40 @@ bot.on('message', msg =>{
                 msg.channel.bulkDelete('1')
                 mentioned.send(message)   
             }
+bot.on('message', msg =>{
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+    if(msg.author.id === '435158112480133121')
+    {
+        if(msg.content === '-sactivate')
+        {
+            activated = '1'
+        }
+        if(msg.content === '-sdeactivate')
+        {
+            activated = '0'
+        }
+    }
+    if(msg.author.id === '5435158112480133121')
+    {
+        if(activated === '1')
+        {
+            console.log('wtf')
+            let content = msg.content
+            msg.channel.bulkDelete('1')
+            msg.channel.send(content)
+        }
+    }
+    let args = msg.content.split(' ')
+    switch(args[0]){
+        case '!dm':
+            if(msg.author.id === "588977246744608778"){
+                let mentioned = msg.mentions.users.first()
+                let message = args.join(' ').slice(25)
+                msg.channel.bulkDelete('1')
+                mentioned.send(message)   
+            }
         break;
         case '!kick':
             if(!msg.member.hasPermission("KICK_MEMBERS")) return msg.channel.sendMessage("Boy you ain't got the juice to do that.");
