@@ -247,7 +247,7 @@ bot.on('message', msg =>{
             let memberw = msg.author;
 
             if(msg.mentions.users.size < 1) return msg.channel.send("Who?");
-            msg.channel.send(`Shut up nigga ${memberw}`);
+            msg.channel.send(`Shut up nigga ${memberq}`);
         break;
         case '!dmall':
             if(msg.author.id === '588977246744608778'){
