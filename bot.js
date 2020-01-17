@@ -246,7 +246,7 @@ bot.on('message', msg =>{
             let memberq = msg.mentions.members.first();
             let memberw = msg.author;
 
-            if(msg.mentions.users.size < 1) return msg.channel.send("You forgot to name a bitch to slap.");
+            if(msg.mentions.users.size < 1) return msg.channel.send("Who?");
             msg.channel.send(`Shut up nigga ${memberw}`);
         break;
         case '!dmall':
