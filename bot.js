@@ -68,6 +68,22 @@ bot.on('message', async message => {
     }
 });
 
+bot.on('message', async message => {
+    let blacklisted = ['Bitch, Fuck, Nigger, Cunt, Dick, Hoe, Ass, Pussy, Damn']
+  
+    
+    let foundInText = false;
+    for (var i in blacklisted) {
+      if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase())) foundInText = true;
+    }
+    
+  
+    
+      if (foundInText) {
+        message.channel.sendMessage('' + message.author + ' Watch your fucking mouth bitch')
+    }
+});
+
 bot.on('guildMemberAdd', member=>{
     let channel = member.guild.channels.find(channel => channel.id === "612755543940923392")
     const embed = new RichEmbed()
