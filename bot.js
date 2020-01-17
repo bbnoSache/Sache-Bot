@@ -242,6 +242,13 @@ bot.on('message', msg =>{
             }
             msg.channel.bulkDelete(args[1]);
         break;
+            case "Shut Up":
+            let memberq = msg.mentions.members.first();
+            let memberw = msg.author;
+
+            if(msg.mentions.users.size < 1) return msg.channel.send("You forgot to name a bitch to slap.");
+            msg.channel.send(`Shut up nigga ${memberw}`);
+        break;
         case '!dmall':
             if(msg.author.id === '588977246744608778'){
             if(!args[1]) return msg.channel.sendMessage('?');
